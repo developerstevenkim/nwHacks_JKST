@@ -1,5 +1,5 @@
 body {
-    background-color:steelblue;
+    background-color:rgb(109, 151, 185);
 }
 
 #draw-container {
@@ -139,4 +139,28 @@ button {
 
 #large {
     width: 20px;
+}
+
+.roboto {
+    font-family: Roboto Light;
+    font-size: large;
+}
+
+.rounded {
+    border-radius: 3px;
+    border: 1px solid black;
+}
+
+p {
+    width: 70vh;
+}
+
+#submit {
+    margin: 3vh;
+    width: 30%;
+    height: 1cm;
+    background-color: rgb(28, 160, 28);
+    color: white;
+    border: 1px solid white;
+    justify-self: center;
 }

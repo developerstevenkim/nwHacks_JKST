@@ -48,18 +48,16 @@ let cyan = document.getElementById("cyan");
 let magenta = document.getElementById("magenta");
 let purple = document.getElementById("purple");
 
-let imageData1;
-let imageData2;
+let imageData;
 let imageNumber = 1;
 
 function SendCanvasDataToServer() {
+    imageData = canvas.toDataURL();
+    socket.emit('drawing', imageData);
     if (imageNumber == 1) {
-        imageData1 = canvas.toDataURL();
-        socket.emit('drawing', imageData1);
-        imageNumber = 2;
+        imageNumber++;
     } else if (imageNumber == 2) {
-        imageData2 = canvas.toDataURL();
-        socket.emit('drawing', imageData2);
+        
     }
 }
 
