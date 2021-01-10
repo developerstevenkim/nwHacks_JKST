@@ -2,26 +2,22 @@ const functions = require('firebase-functions');
 const express = require('express');
 const app = express();
 
-var fs = require('fs');
-var template = require('./lib/template.js');
-
+app.use(express.static("public"));
 
 app.get('/timestamp', (req, res) => {
-    res.send(`${Date.now()}`);
+    res.send(`
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello world!</h1>
+</body>
+</html>
+    `);
 });
-
-app.get('/example', (req, res) => {
-    fs.readdir('./data', function (error, filelist) {
-        var title = 'Welcome';
-        var description = 'Hello, Node.js';
-        var list = template.list(filelist);
-        var html = template.HTML(title, list,
-            `<h2>${title}</h2>${description}`,
-            `<a href="/create">create</a>`
-        );
-        res.send(html);
-    });
-});
-
 
 exports.app = functions.https.onRequest(app);
