@@ -25,7 +25,7 @@ var uiConfig = {
                         points: 0
                     }).then(function () {
                         console.log("New user added to firestore");
-                        window.location.assign("game.html");
+                        window.location.assign("index.html");
                     })
                     .catch(function (error) {
                         console.log("Error adding new user: " + error);
@@ -45,16 +45,16 @@ var uiConfig = {
 
     // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
     signInFlow: 'popup',
-    signInSuccessUrl: 'game.html',
+    signInSuccessUrl: 'index.html',
     signInOptions: [
         firebase.auth.GoogleAuthProvider.PROVIDER_ID,
     ],
 
     // Terms of service url.
-    tosUrl: 'game.html', // temporary
+    tosUrl: 'index.html', // temporary
 
     // Privacy policy url.
-    privacyPolicyUrl: 'game.html',  // temporary
+    privacyPolicyUrl: 'index.html',  // temporary
 };
 
 // The start method will wait until the DOM is loaded.
