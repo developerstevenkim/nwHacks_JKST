@@ -1,4 +1,4 @@
-var socket = io();
+// var socket = io();
 
 // JavaScript Paint
 
@@ -53,13 +53,13 @@ let imageNumber = 1;
 
 function SendCanvasDataToServer() {
     imageData = canvas.toDataURL();
-    socket.emit('drawing', imageData);
+    // socket.emit('drawing', imageData);
     if (imageNumber == 1) {
         document.getElementById("instructions").innerText = "Your first design was saved. Draw your second design now!";
         imageNumber++;
         ResetCanvas();
     } else if (imageNumber == 2) {
-        window.location.href = "http://localhost:5000/slogans";
+        window.location.href = "./slogans.html";
     }
 }
 

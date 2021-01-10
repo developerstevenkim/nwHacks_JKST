@@ -39,7 +39,7 @@ function SendDataToServer() {
 
 const GoToResultsPage = async () => {
     const result = await SendDataToServer();
-    window.location.href = "http://localhost:5000/results";
+    // window.location.href = "http://localhost:5000/results";
 };
 
 
