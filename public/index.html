@@ -22,8 +22,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
-        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   <link type="text/css" rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="../public/css/drawing.css">
 
 </head>
 
@@ -32,7 +33,7 @@
     <header class="mb-auto">
       <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-xl">
-          <a class="navbar-brand" href="#home">
+          <a class="navbar-brand" href="#home" onclick="firstShow()">
             <h1>ChampionShirt</h1>
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -63,15 +64,15 @@
       </nav>
     </header>
 
-    <main class="container-xl w-50 p-3 mx-auto">
+    <main class="container-xl w-50 p-3 mx-auto" id="firstPage">
       <div id="home">
         <div style="height:100px;"></div> <!-- white space -->
         <h1 class="h1">Welcome!</h1>
         <p class="lead">
           Compete with random people in t-shirt designing, winner gets to donate clothes under their name for free!
         </p>
-        <p class="lead"><button type="button" class="btn btn-outline-light btn-lg">Create a game</button></p>
-        <p class="lead"><button type="button" class="btn btn-outline-light btn-lg">Join a game</button></p>
+        <p class="lead"><button type="button" class="btn btn-outline-light btn-lg" id="createGame" onclick="secondShow();">Create a game</button></p>
+        <p class="lead"><button type="button" class="btn btn-outline-light btn-lg" id="joinGame">Join a game</button></p>
       </div>
       <div style="height:200px;"></div> <!-- white space -->
       <div id="about">
@@ -82,11 +83,12 @@
             <img class="card-img-top" src="./images/cat_green.png" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Steven</h5>
-              <p class="card-text">Hello guys. I'm majoring in Computer System Technology at BCIT. I love to develop applications.</p>
+              <p class="card-text">Hello guys. I'm majoring in Computer System Technology at BCIT. I love to develop
+                applications.</p>
               <p class="card-text"><small class="text-muted">
-                <a href="https://github.com/developerstevenkim/" class="github" target="_blank"><i
-                class="fab fa-github"></i></a>
-              </small></p>
+                  <a href="https://github.com/developerstevenkim/" class="github" target="_blank"><i
+                      class="fab fa-github"></i></a>
+                </small></p>
             </div>
           </div>
           <div class="card">
@@ -95,9 +97,9 @@
               <h5 class="card-title">Terry</h5>
               <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
               <p class="card-text"><small class="text-muted">
-                <a href="https://github.com/terry-yoon1205" class="github" target="_blank"><i
-                  class="fab fa-github"></i></a>
-              </small></p>
+                  <a href="https://github.com/terry-yoon1205" class="github" target="_blank"><i
+                      class="fab fa-github"></i></a>
+                </small></p>
             </div>
           </div>
           <div class="card">
@@ -107,15 +109,66 @@
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
                 content. This card has even longer content than the first to show that equal height action.</p>
               <p class="card-text"><small class="text-muted">
-                <a href="https://github.com/jakobfipke" class="github" target="_blank"><i
-                  class="fab fa-github"></i></a>
-              </small></p>
+                  <a href="https://github.com/jakobfipke" class="github" target="_blank"><i
+                      class="fab fa-github"></i></a>
+                </small></p>
             </div>
           </div>
         </div>
       </div>
     </main>
-    
+
+    <!-- Drawing -->
+    <main class="container-xl w-50 p-3 mx-auto" id="secondPage" style="display:none;">
+      <div id="canvas-box">
+        <div id="draw-container">
+          <canvas id="my-canvas" width="500" height="500"></canvas>
+          <div id="palette">
+            <button id="black" class="palette" onclick="ChangeColor('black')"></button>
+            <button id="gray" class="palette" onclick="ChangeColor('gray')"></button>
+            <button id="white" class="palette" onclick="ChangeColor('white')"></button>
+            <button id="brown" class="palette" onclick="ChangeColor('brown')"></button>
+            <button id="red" class="palette" onclick="ChangeColor('red')"></button>
+            <button id="orange" class="palette" onclick="ChangeColor('orange')"></button>
+            <button id="yellow" class="palette" onclick="ChangeColor('yellow')"></button>
+            <button id="lime" class="palette" onclick="ChangeColor('lime')"></button>
+            <button id="green" class="palette" onclick="ChangeColor('green')"></button>
+            <button id="blue" class="palette" onclick="ChangeColor('blue')"></button>
+            <button id="cyan" class="palette" onclick="ChangeColor('cyan')"></button>
+            <button id="magenta" class="palette" onclick="ChangeColor('magenta')"></button>
+            <button id="purple" class="palette" onclick="ChangeColor('purple')"></button>
+          </div>
+        </div>
+
+        <div id="toolbox">
+          <button id="brush" class="tool" title="draw" onclick="ChangeTool('brush')"><img class="icon"
+              src="icons/brush.png"></button>
+          <button id="line" class="tool" title="line" onclick="ChangeTool('line')"><img class="icon"
+              src="icons/line.png"></button>
+          <button id="rectangle" class="tool" title="rectangle" onclick="ChangeTool('rectangle')"><img class="icon"
+              src="icons/rectangle.png"></button>
+          <button id="circle" class="tool" title="circle" onclick="ChangeTool('circle')"><img class="icon"
+              src="icons/circle.png"></button>
+          <button id="fill" class="tool" title="fill" onclick="FillCanvas()"><img class="icon"
+              src="icons/fill.png"></button>
+          <button id="clear" class="tool" title="erase all" onclick="ResetCanvas()"><img class="icon"
+              src="icons/garbage.png"></button>
+          <button id="save" class="tool" title="save as image">
+            <a id="img-file" onclick="SaveImage()">
+              <img class="icon" src="icons/save.png">
+            </a>
+          </button>
+          <button id="undo" class="tool" title="undo" onclick="Undo()"><img class="icon" src="icons/undo.png"></button>
+        </div>
+
+        <div id="brushsizes">
+          <button class="brushsize" onclick="ChangeLineWidth(3)"><img id="small" src="icons/brushsize.png"></button>
+          <button class="brushsize" onclick="ChangeLineWidth(8)"><img id="medium" src="icons/brushsize.png"></button>
+          <button class="brushsize" onclick="ChangeLineWidth(14)"><img id="large" src="icons/brushsize.png"></button>
+        </div>
+
+      </div>
+    </main>
     <div style="height:100px;"></div> <!-- white space -->
 
     <footer class="mt-auto bg-white text-muted p-3 fixed-bottom">
@@ -132,6 +185,7 @@
   <!-- <script src="./js/firebase_api.js"></script>
   <script src="./js/login_check.js"></script>
   <script src="./js/login.js"></script> -->
+  <script src="./js/index.js"></script>
 
   <!-- Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"

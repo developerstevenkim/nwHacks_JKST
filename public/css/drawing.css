@@ -1,5 +1,6 @@
 body {
-    background-color:steelblue;
+    /* background-color:steelblue; */
+    background-color: #EF862E;
 }
 
 #draw-container {
@@ -8,8 +9,6 @@ body {
 }
 
 #canvas-box {
-    height: 97%;
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
