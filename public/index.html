@@ -21,6 +21,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Fira+Sans">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   <link type="text/css" rel="stylesheet" href="./css/style.css">
 
 </head>
@@ -30,7 +32,7 @@
     <header class="mb-auto">
       <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-xl">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="#home">
             <h1>ChampionShirt</h1>
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -41,10 +43,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" href="#">Home</a>
+                <a class="nav-link active" href="#home">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#about">About</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Leaderboard</a>
@@ -53,7 +55,8 @@
                 <a class="nav-link" href="#">Settings</a>
               </li>
             </ul>
-            <button type="button" class="btn btn-outline-light" id="loginbtn" onclick="location.href='./login.html'" style="display:block;">Log
+            <button type="button" class="btn btn-outline-light" id="loginbtn" onclick="location.href='./login.html'"
+              style="display:block;">Log
               In</button>
           </div>
         </div>
@@ -61,15 +64,61 @@
     </header>
 
     <main class="container-xl w-50 p-3 mx-auto">
-      <h1 class="h1">Welcome!</h1>
-      <p class="lead">
-        Compete with random people in t-shirt designing, winner gets to donate clothes under their name for free!
-      </p>
-      <p class="lead"><button type="button" class="btn btn-outline-light btn-lg">Create a game</button></p>
-      <p class="lead"><button type="button" class="btn btn-outline-light btn-lg">Join a game</button></p>
+      <div id="home">
+        <div style="height:100px;"></div> <!-- white space -->
+        <h1 class="h1">Welcome!</h1>
+        <p class="lead">
+          Compete with random people in t-shirt designing, winner gets to donate clothes under their name for free!
+        </p>
+        <p class="lead"><button type="button" class="btn btn-outline-light btn-lg">Create a game</button></p>
+        <p class="lead"><button type="button" class="btn btn-outline-light btn-lg">Join a game</button></p>
+      </div>
+      <div style="height:200px;"></div> <!-- white space -->
+      <div id="about">
+        <div style="height:100px;"></div> <!-- white space -->
+        <h1 class="h1">About us!</h1><br><br>
+        <div class="card-group">
+          <div class="card">
+            <img class="card-img-top" src="./images/cat_green.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Steven</h5>
+              <p class="card-text">Hello guys. I'm majoring in Computer System Technology at BCIT. I love to develop applications.</p>
+              <p class="card-text"><small class="text-muted">
+                <a href="https://github.com/developerstevenkim/" class="github" target="_blank"><i
+                class="fab fa-github"></i></a>
+              </small></p>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="./images/cat_red.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Terry</h5>
+              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+              <p class="card-text"><small class="text-muted">
+                <a href="https://github.com/terry-yoon1205" class="github" target="_blank"><i
+                  class="fab fa-github"></i></a>
+              </small></p>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="./images/cat_yellow.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Jakob</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This card has even longer content than the first to show that equal height action.</p>
+              <p class="card-text"><small class="text-muted">
+                <a href="https://github.com/jakobfipke" class="github" target="_blank"><i
+                  class="fab fa-github"></i></a>
+              </small></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
+    
+    <div style="height:100px;"></div> <!-- white space -->
 
-    <footer class="mt-auto bg-white text-muted p-3">
+    <footer class="mt-auto bg-white text-muted p-3 fixed-bottom">
       <p>all rights (not) reserved</p>
     </footer>
   </div>
@@ -79,9 +128,10 @@
   <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
 
-  <script src="./js/firebase_api.js"></script>
+
+  <!-- <script src="./js/firebase_api.js"></script>
   <script src="./js/login_check.js"></script>
-  <script src="./js/login.js"></script>
+  <script src="./js/login.js"></script> -->
 
   <!-- Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"

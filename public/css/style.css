@@ -25,6 +25,18 @@ h1 {
     color: #EF862E;
 }
 
+.card-img-top {
+    border-radius: 50%;
+}
+
+.card-body {
+    color: #EF862E;
+}
+
+.fab {
+    font-size: 2rem;
+    color: black;
+}
 
 /*@media (max-width: 600px) {*/
 
