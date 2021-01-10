@@ -25,45 +25,54 @@
 
 </head>
 
-<body>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container-xl">
-        <a class="navbar-brand" href="#">
-          <h1>ChampionShirt</h1>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Leaderboard</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Settings</a>
-            </li>
-          </ul>
-          <button type="button" class="btn btn-outline-light" id ="loginbtn" onclick="location.href='./login.html'">Log In</button>
+<body class="h-100">
+  <div class="d-flex h-100 flex-column text-center">
+    <header class="mb-auto">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-xl">
+          <a class="navbar-brand" href="#">
+            <h1>ChampionShirt</h1>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Leaderboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Settings</a>
+              </li>
+            </ul>
+            <button type="button" class="btn btn-outline-light" id="loginbtn" onclick="location.href='./login.html'">Log
+              In</button>
+          </div>
         </div>
-      </div>
-    </nav>
-  </header>
+      </nav>
+    </header>
 
-  <main>
-    <h1>Welcome!</h1>
-  </main>
+    <main class="container-xl w-50 p-3 mx-auto">
+      <h1 class="h1">Welcome!</h1>
+      <p class="lead">
+        Compete with random people in t-shirt designing, winner gets to donate clothes under their name for free!
+      </p>
+      <p class="lead"><button type="button" class="btn btn-outline-light btn-lg">Create a game</button></p>
+      <p class="lead"><button type="button" class="btn btn-outline-light btn-lg">Join a game</button></p>
+    </main>
 
-  <footer>
-
-  </footer>
+    <footer class="mt-auto bg-white text-muted p-3">
+      <p>all rights (not) reserved</p>
+    </footer>
+  </div>
 
 
   <!-- Firebase -->
