@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drawing Time!</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/drawing.css">
+
+</head>
+<body>
+
+
+<div id="canvas-box">
+    <div id="draw-container">
+        <canvas id="my-canvas" width="500" height="500"></canvas>
+        <div id="palette">
+            <button id="black" class="palette" onclick="ChangeColor('black')"></button>
+            <button id="gray" class="palette" onclick="ChangeColor('gray')"></button>
+            <button id="white" class="palette" onclick="ChangeColor('white')"></button>
+            <button id="brown" class="palette" onclick="ChangeColor('brown')"></button>
+            <button id="red" class="palette" onclick="ChangeColor('red')"></button>
+            <button id="orange" class="palette" onclick="ChangeColor('orange')"></button>
+            <button id="yellow" class="palette" onclick="ChangeColor('yellow')"></button>
+            <button id="lime" class="palette" onclick="ChangeColor('lime')"></button>
+            <button id="green" class="palette" onclick="ChangeColor('green')"></button>
+            <button id="blue" class="palette" onclick="ChangeColor('blue')"></button>
+            <button id="cyan" class="palette" onclick="ChangeColor('cyan')"></button>
+            <button id="magenta" class="palette" onclick="ChangeColor('magenta')"></button>  
+            <button id="purple" class="palette" onclick="ChangeColor('purple')"></button>      
+        </div>
+    </div>
+    
+    <div id="toolbox">
+        <button id="brush" class="tool" title="draw" onclick="ChangeTool('brush')"><img class="icon" src="icons/brush.png"></button>
+        <button id="line" class="tool" title="line" onclick="ChangeTool('line')"><img class="icon" src="icons/line.png"></button>
+        <button id="rectangle" class="tool" title="rectangle" onclick="ChangeTool('rectangle')"><img class="icon" src="icons/rectangle.png"></button>
+        <button id="circle" class="tool" title="circle" onclick="ChangeTool('circle')"><img class="icon" src="icons/circle.png"></button>
+        <button id="fill" class="tool" title="fill" onclick="FillCanvas()"><img class="icon" src="icons/fill.png"></button>
+        <button id="clear" class="tool" title="erase all" onclick="ResetCanvas()"><img class="icon" src="icons/garbage.png"></button>
+        <button id="save" class="tool" title="save as image">
+            <a id="img-file" onclick="SaveImage()">
+                <img class="icon" src="icons/save.png">
+            </a>
+        </button>
+        <button id="undo" class="tool" title="undo" onclick="Undo()"><img class="icon" src="icons/undo.png"></button>
+    </div>
+
+    <div id="brushsizes">
+        <button class="brushsize" onclick="ChangeLineWidth(3)"><img id="small" src="icons/brushsize.png"></button>
+        <button class="brushsize" onclick="ChangeLineWidth(8)"><img id="medium" src="icons/brushsize.png"></button>
+        <button class="brushsize" onclick="ChangeLineWidth(14)"><img id="large" src="icons/brushsize.png"></button>
+    </div>
+
+</div>
+
+<script src="../public/js/drawing.js"></script>
+    
+</body>
+</html>
