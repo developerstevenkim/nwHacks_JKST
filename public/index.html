@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
     integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   <link type="text/css" rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" type="text/css" href="../public/css/drawing.css">
+  <link rel="stylesheet" type="text/css" href="./css/drawing.css">
 
 </head>
 
@@ -201,10 +201,20 @@
 
       </div>
       <div style="height:100px;"></div>
-      <p class="lead"><button type="button" class="btn btn-outline-light btn-lg" id="uploadImg">Upload Image</button></p>
+
+      <div class="input-group">
+        <div class="custom-file">
+          <input type="file" class="btn btn-outline-secondary" id="inputGroupFile04">
+          <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+        </div>
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button">Button</button>
+        </div>
+      </div>
+
     </main>
     <div style="height:100px;"></div> <!-- white space -->
-    
+
     <footer class="mt-auto bg-white text-muted p-3 fixed-bottom">
       <p>all rights (not) reserved</p>
     </footer>
