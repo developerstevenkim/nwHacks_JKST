@@ -24,6 +24,10 @@ app.get('/drawing', (request, response) => {
   response.sendFile(path.join(__dirname, '/public/drawing.html'));
 });
 
+app.get('/results', (request, response) => {
+  response.sendFile(path.join(__dirname, '/public/results.html'));
+});
+
 server.listen(5000, () => {
   console.log('Starting server on port 5000');
 });
@@ -47,8 +51,6 @@ io.on('connection', (socket) => {
 
   socket.on('drawing', (data) => {
     alldrawings.push(data);
-
-    SendImageDataBack();
   })
 
   socket.on('slogans', (data) => {
@@ -58,9 +60,12 @@ io.on('connection', (socket) => {
       combinedslogans.push(data.s3);
       combinedslogans.push(data.s4);
       combinedslogans.push(data.s5);
-
-      PrintChoices();
-
+      console.log("slogans event");
+  });
+  socket.on('data request', () => {
+    SendImageDataBack();
+    PrintChoices();
+    console.log(combinedslogans);
   });
 });
 

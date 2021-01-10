@@ -55,19 +55,13 @@ function SendCanvasDataToServer() {
     imageData = canvas.toDataURL();
     socket.emit('drawing', imageData);
     if (imageNumber == 1) {
+        document.getElementById("instructions").innerText = "Your first design was saved. Draw your second design now!";
         imageNumber++;
+        ResetCanvas();
     } else if (imageNumber == 2) {
-        
+        window.location.href = "http://localhost:5000/slogans";
     }
 }
-
-socket.on('images', (data) => {
-    for (let i = 0; i < data.length; i++) {
-        let img = document.createElement("img");
-        img.src = data[i];
-        document.body.appendChild(img);
-    }
-});
 
 // Stores size data used to create rubber band shapes
 // that will redraw as the user moves the mouse

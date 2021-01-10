@@ -30,14 +30,16 @@ function SubmitSlogans() {
     slogans.s3 = s3;
     slogans.s4 = s4;
     slogans.s5 = s5;
+    GoToResultsPage();
+}
+
+function SendDataToServer() {
     socket.emit('slogans', slogans);
 }
 
-socket.on('choices', (data) => {
-    for (let i = 0; i < data.length; i++) {
-        console.log(data[i]);
-    }
-});
-
+const GoToResultsPage = async () => {
+    const result = await SendDataToServer();
+    window.location.href = "http://localhost:5000/results";
+};
 
 
