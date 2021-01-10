@@ -11,3 +11,5 @@ function secondShow() {
     firstPage.style.display = "none";
     secondPage.style.display = "block";
 }
+
+
