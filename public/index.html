@@ -44,13 +44,13 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" href="#home">Home</a>
+                <a class="nav-link active" href="#home" onclick="firstShow()">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#about">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Leaderboard</a>
+                <a class="nav-link" href="#leaderboard">Leaderboard</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Settings</a>
@@ -64,19 +64,21 @@
       </nav>
     </header>
 
-    <main class="container-xl w-50 p-3 mx-auto" id="firstPage">
+    <main class="container-xl w-70 p-3 mx-auto" id="firstPage">
       <div id="home">
         <div style="height:100px;"></div> <!-- white space -->
         <h1 class="h1">Welcome!</h1>
         <p class="lead">
           Compete with random people in t-shirt designing, winner gets to donate clothes under their name for free!
         </p>
-        <p class="lead"><button type="button" class="btn btn-outline-light btn-lg" id="createGame" onclick="secondShow();">Create a game</button></p>
-        <p class="lead"><button type="button" class="btn btn-outline-light btn-lg" id="joinGame">Join a game</button></p>
+        <p class="lead"><button type="button" class="btn btn-outline-light btn-lg" id="createGame"
+            onclick="secondShow();">Create a game</button></p>
+        <p class="lead"><button type="button" class="btn btn-outline-light btn-lg" id="joinGame">Join a game</button>
+        </p>
       </div>
       <div style="height:200px;"></div> <!-- white space -->
       <div id="about">
-        <div style="height:100px;"></div> <!-- white space -->
+        <div style="height:40px;"></div> <!-- white space -->
         <h1 class="h1">About us!</h1><br><br>
         <div class="card-group">
           <div class="card">
@@ -116,10 +118,40 @@
           </div>
         </div>
       </div>
+      <div style="height:100px;"></div> <!-- white space -->
+      <div id="leaderboard">
+        <div style="height:40px;"></div> <!-- white space -->
+        <div class="tableDiv">
+          <h1 class="h1">Leader Board</h1><br>
+          <table>
+            <tr>
+              <th>Leader</th>
+              <th>Name</th>
+              <th>Points</th>
+            </tr>
+            <tr>
+              <td><i class="fas fa-crown"><i class="fas fa-crown"><i class="fas fa-crown"></i></td>
+              <td>Steven</td>
+              <td>740 Points</td>
+            </tr>
+            <tr>
+              <td><i class="fas fa-crown"><i class="fas fa-crown"></i></td>
+              <td>Jakob</td>
+              <td>680 Points</td>
+            </tr>
+            <tr>
+              <td><i class="fas fa-crown"></td>
+              <td>Terry</td>
+              <td>640 Points</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div style="height:200px;"></div> <!-- white space -->
     </main>
 
     <!-- Drawing -->
-    <main class="container-xl w-50 p-3 mx-auto" id="secondPage" style="display:none;">
+    <main class="container-xl w-70 p-3 mx-auto" id="secondPage" style="display:none;">
       <div id="canvas-box">
         <div id="draw-container">
           <canvas id="my-canvas" width="500" height="500"></canvas>
@@ -168,9 +200,11 @@
         </div>
 
       </div>
+      <div style="height:100px;"></div>
+      <p class="lead"><button type="button" class="btn btn-outline-light btn-lg" id="uploadImg">Upload Image</button></p>
     </main>
     <div style="height:100px;"></div> <!-- white space -->
-
+    
     <footer class="mt-auto bg-white text-muted p-3 fixed-bottom">
       <p>all rights (not) reserved</p>
     </footer>
