@@ -2,10 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4dc5de9a-0d78-4074-b5c2-e3066ed80f0a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/results.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/slogans.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/results.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/slogans.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/results.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/slogans.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/drawing.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/drawing.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/drawing.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/drawing.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaderboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/leaderboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/drawing.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/drawing.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +30,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />

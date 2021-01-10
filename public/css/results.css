@@ -1,0 +1,25 @@
+* {
+    font-family: Roboto;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 6fr 3fr;
+    grid-template-rows: 1fr;
+}
+
+#images {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#images > * {
+    width: 45%;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 2%;
+}
+
+#slogans {
+    margin: 2%;
+}

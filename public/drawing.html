@@ -11,6 +11,7 @@
           integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Fira+Sans">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" type="text/css" href="../public/css/drawing.css">
     <link rel="stylesheet" type="text/css" href="../public/css/style.css">
 </head>
@@ -55,6 +56,10 @@
 
     <div id="canvas-box">
         <div id="draw-container">
+            <p id="instructions" class="roboto">
+                It's time to draw some t-shirt designs! You will be drawing two different designs of
+                whatever you can think up. When you are done each drawing click the submit button.
+            </p>
             <canvas id="my-canvas" width="500" height="500"></canvas>
             <div id="palette">
                 <button id="black" class="palette" onclick="ChangeColor('black')"></button>
@@ -71,6 +76,7 @@
                 <button id="magenta" class="palette" onclick="ChangeColor('magenta')"></button>
                 <button id="purple" class="palette" onclick="ChangeColor('purple')"></button>
             </div>
+            <button id="submit" class="roboto rounded" onclick="SendCanvasDataToServer()">Submit</button>
         </div>
 
         <div id="toolbox">
@@ -111,6 +117,9 @@
     </footer>
 </div>
 
+
+
+<script src="/socket.io/socket.io.js"></script>
 <script src="../public/js/drawing.js"></script>
 
 <!-- Bootstrap -->

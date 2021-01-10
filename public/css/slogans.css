@@ -1,0 +1,51 @@
+body {
+    background-color:orchid;
+}
+
+#form {
+    position: absolute;
+    top: 20%;
+    height: 60%;
+    width: 99%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#form > .slogan {
+    width: 60vw;
+}
+
+#form > .slogan > input {
+    width: 100%;
+}
+
+
+input {
+    height: 1cm;
+}
+
+.roboto {
+    font-family: Roboto Light;
+    font-size: large;
+}
+
+button {
+    display: block;
+    width: 30%;
+    height: 1cm;
+    margin-top: 3vh;
+    background-color:steelblue;
+    color: white;
+}
+
+#submit-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.rounded {
+    border-radius: 3px;
+    border: 1px solid black;
+}
