@@ -11,6 +11,10 @@
 </head>
 <body>
 
+<p>
+    It's time to draw some t-shirt designs! You will be drawing two different designs of 
+    whatever you can think up. When you are done each drawing click the submit button.
+</p>
 
 <div id="canvas-box">
     <div id="draw-container">
@@ -33,28 +37,41 @@
     </div>
     
     <div id="toolbox">
-        <button id="brush" class="tool" title="draw" onclick="ChangeTool('brush')"><img class="icon" src="icons/brush.png"></button>
-        <button id="line" class="tool" title="line" onclick="ChangeTool('line')"><img class="icon" src="icons/line.png"></button>
-        <button id="rectangle" class="tool" title="rectangle" onclick="ChangeTool('rectangle')"><img class="icon" src="icons/rectangle.png"></button>
-        <button id="circle" class="tool" title="circle" onclick="ChangeTool('circle')"><img class="icon" src="icons/circle.png"></button>
-        <button id="fill" class="tool" title="fill" onclick="FillCanvas()"><img class="icon" src="icons/fill.png"></button>
-        <button id="clear" class="tool" title="erase all" onclick="ResetCanvas()"><img class="icon" src="icons/garbage.png"></button>
+        <button id="brush" class="tool" title="draw" onclick="ChangeTool('brush')">
+            <img class="icon" src="../public/icons/brush.png"></button>
+        <button id="line" class="tool" title="line" onclick="ChangeTool('line')">
+            <img class="icon" src="../public/icons/line.png"></button>
+        <button id="rectangle" class="tool" title="rectangle" onclick="ChangeTool('rectangle')">
+            <img class="icon" src="../public/icons/rectangle.png"></button>
+        <button id="circle" class="tool" title="circle" onclick="ChangeTool('circle')">
+            <img class="icon" src="../public/icons/circle.png"></button>
+        <button id="fill" class="tool" title="fill" onclick="FillCanvas()">
+            <img class="icon" src="../public/icons/fill.png"></button>
+        <button id="clear" class="tool" title="erase all" onclick="ResetCanvas()">
+            <img class="icon" src="../public/icons/garbage.png"></button>
         <button id="save" class="tool" title="save as image">
             <a id="img-file" onclick="SaveImage()">
-                <img class="icon" src="icons/save.png">
+                <img class="icon" src="../public/icons/save.png">
             </a>
         </button>
-        <button id="undo" class="tool" title="undo" onclick="Undo()"><img class="icon" src="icons/undo.png"></button>
+        <button id="undo" class="tool" title="undo" onclick="Undo()">
+            <img class="icon" src="../public/icons/undo.png"></button>
     </div>
 
     <div id="brushsizes">
-        <button class="brushsize" onclick="ChangeLineWidth(3)"><img id="small" src="icons/brushsize.png"></button>
-        <button class="brushsize" onclick="ChangeLineWidth(8)"><img id="medium" src="icons/brushsize.png"></button>
-        <button class="brushsize" onclick="ChangeLineWidth(14)"><img id="large" src="icons/brushsize.png"></button>
+        <button class="brushsize" onclick="ChangeLineWidth(3)">
+            <img id="small" src="../public/icons/brushsize.png"></button>
+        <button class="brushsize" onclick="ChangeLineWidth(8)">
+            <img id="medium" src="../public/icons/brushsize.png"></button>
+        <button class="brushsize" onclick="ChangeLineWidth(14)">
+            <img id="large" src="../public/icons/brushsize.png"></button>
     </div>
 
 </div>
 
+<button id="submit" onclick="SendCanvasDataToServer()">Submit</button>
+
+<script src="/socket.io/socket.io.js"></script>
 <script src="../public/js/drawing.js"></script>
     
 </body>
