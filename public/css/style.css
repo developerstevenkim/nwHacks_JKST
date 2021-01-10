@@ -8,6 +8,10 @@ h1 {
     font-family: Lobster, Helvetica, Arial, sans-serif;
 }
 
+.h1 {
+    font-size: 4em;
+}
+
 .navbar {
     background-color: #EF862E;
     box-shadow: 0 2px 5px 0 #eea763;
@@ -25,10 +29,6 @@ h1 {
     color: #EF862E;
 }
 
-.w-70 {
-    width: 70%;
-}
-
 .card-img-top {
     border-radius: 50%;
 }
@@ -40,13 +40,6 @@ h1 {
 .fab {
     font-size: 2rem;
     color: black;
-}
-
-.tableDiv {
-    margin-left: 10%;
-    margin-right: 10%;
-    width: 80%;
-    align-items: center;
 }
 
 tr:nth-child(even) {
@@ -73,10 +66,7 @@ th {
 th:nth-child(3) {
     width: 500px;
 }
-.fixed-bottom {
-    padding: 4px!important;
-    height: 30px;
-}
+
 /* Mobile View */
 @media (max-width: 500px) {
     .tableDiv {
