@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slogan Time!</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" type="text/css" href="../public/css/slogans.css">
+
+ 
+</head>
+<body>
+
+    <div id="form">
+        <div class="slogan">
+            <p class="roboto">
+                Come up with some creative and hilarious slogans 
+                that can be used on a t-shirt! When you have typed 
+                in all of your slogans and are happy with them, click 
+                <strong>Finish</strong> to move onto the next round.
+            </h4>
+        </div>
+        <div class="slogan">
+            <input id="s1" class="roboto rounded" type="text" placeholder="Enter a slogan" value="">
+        </div>
+        <div class="slogan">
+            <input id="s2" class="roboto rounded" type="text" placeholder="Enter a slogan" value="">
+        </div>
+        <div class="slogan">
+            <input id="s3" class="roboto rounded" type="text" placeholder="Enter a slogan" value="">
+        </div>
+        <div class="slogan">
+            <input id="s4" class="roboto rounded" type="text" placeholder="Enter a slogan" value="">
+        </div>
+        <div class="slogan">
+            <input id="s5" class="roboto rounded" type="text" placeholder="Enter a slogan" value="">
+        </div>
+        <div id="submit-container" class="slogan">
+            <button id="submit" class="roboto rounded" onclick="SubmitSlogans()">Finish</button>
+        </div>
+        
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/public/js/slogans.js"></script>
+    
+</body>
+</html>
